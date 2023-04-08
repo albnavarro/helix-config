@@ -1,0 +1,18 @@
+theme = "tokyonight_storm"
+
+[editor]
+line-number = "relative"
+cursorline = true
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
