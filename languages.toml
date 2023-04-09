@@ -1,6 +1,8 @@
 # npm i -g vscode-langservers-extracted
 # npm install -g typescript-language-server typescript
 # npm install -g prettier
+# npm install -g eslint
+# npm install -g stylelint
 
 [[language]]
 name = "html"
