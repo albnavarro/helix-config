@@ -56,17 +56,18 @@ esc = ["collapse_selection", "normal_mode"]
 "L" = "goto_window_bottom"
 "M" = "goto_window_center"
 
-# muscle memory from vim.
-
 # Vertical Multicursor.
 "C-v" = "copy_selection_on_next_line"
 
-# Add change to the end of line. ( old veetical multicursor )
-"C" = ["select_mode", "goto_line_end", "change_selection"]
+# muscle memory from vim.
 
-# Delete to the end of line.
-"D" = ["select_mode", "goto_line_end", "delete_selection"]
+# Add change from cursor to the end of line. ( old veretical multicursor command )
+"C" = ["collapse_selection", "select_mode", "goto_line_end", "change_selection"]
 
+# Delete from cursor to the end of line.
+"D" = ["collapse_selection", "select_mode", "goto_line_end", "delete_selection"]
+
+# General
 "{" = ["goto_prev_paragraph", "collapse_selection"]
 "}" = ["goto_next_paragraph", "collapse_selection"]
 0 = "goto_line_start"
@@ -74,8 +75,8 @@ esc = ["collapse_selection", "normal_mode"]
 "^" = "goto_first_nonwhitespace"
 G = "goto_file_end"
 V = ["select_mode", "extend_to_line_bounds"]
-"%" = "match_brackets"
-"s" = ["change_selection"]
+"%" = "match_brackets" # use ggVG
+"s" = ["collapse_selection", "change_selection"] # use c to change selection content
 "i" = ["insert_mode", "collapse_selection"]
 "a" = ["append_mode", "collapse_selection"]
 
