@@ -21,6 +21,10 @@ mode.select = "SELECT"
 [editor.soft-wrap]
 enable = true
 
+############################################
+### NORMAL MODE
+###########################################
+
 [keys.normal]
 
 # Esc extended
@@ -61,6 +65,10 @@ V = ["select_mode", "extend_to_line_bounds"]
 "a" = ["append_mode", "collapse_selection"]
 
 
+############################################
+### SELECT MODE
+###########################################
+
 [keys.select]
 
 # Move line down
@@ -74,6 +82,9 @@ V = ["select_mode", "extend_to_line_bounds"]
 
 # Scroll up view by 5 lines
 "C-y" = ["scroll_up", "scroll_up", "scroll_up", "scroll_up", "scroll_up"]
+
+# Repat last motion ( next )
+"C-n" = ["repeat_last_motion"]
 
 # Paste without delete the content.
 p = "replace_with_yanked"
@@ -94,6 +105,10 @@ j = ["extend_line_down", "extend_to_line_bounds"]
 
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
+
+############################################
+### SELECT G MODE
+###########################################
 
 [keys.select.g]
 
