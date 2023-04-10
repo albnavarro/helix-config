@@ -47,7 +47,7 @@ esc = ["collapse_selection", "normal_mode"]
 # Move line up
 "up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
-# muscle memory
+# muscle memory from vim.
 "{" = ["goto_prev_paragraph", "collapse_selection"]
 "}" = ["goto_next_paragraph", "collapse_selection"]
 0 = "goto_line_start"
@@ -56,7 +56,7 @@ esc = ["collapse_selection", "normal_mode"]
 G = "goto_file_end"
 V = ["select_mode", "extend_to_line_bounds"]
 "%" = "match_brackets"
-"s" = ["delete_selection", "change_selection"]
+"s" = ["change_selection"]
 "i" = ["insert_mode", "collapse_selection"]
 "a" = ["append_mode", "collapse_selection"]
 
@@ -73,7 +73,7 @@ V = ["select_mode", "extend_to_line_bounds"]
 p = "replace_with_yanked"
 P = "replace_selections_with_clipboard"
 
-# muscle memory
+# muscle memory from vim.
 "{" = ["extend_to_line_bounds", "goto_prev_paragraph"]
 "}" = ["extend_to_line_bounds", "goto_next_paragraph"]
 0 = "goto_line_start"
@@ -85,5 +85,5 @@ G = "goto_file_end"
 
 [keys.select.g]
 
-# muscle memory
+# muscle memory from vim.
 "_" = "goto_line_end"
