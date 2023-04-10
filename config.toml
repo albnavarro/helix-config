@@ -63,6 +63,12 @@ V = ["select_mode", "extend_to_line_bounds"]
 
 [keys.select]
 
+# Move line down
+"down" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+
+# Move line up
+"up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
 # Scroll down view by 5 lines
 "C-e" = ["scroll_down", "scroll_down", "scroll_down", "scroll_down", "scroll_down"]
 
@@ -82,6 +88,9 @@ P = "replace_selections_with_clipboard"
 G = "goto_file_end"
 "%" = "match_brackets"
 
+# Make selecting lines in visual mode behave sensibly
+k = ["extend_line_up", "extend_to_line_bounds"]
+j = ["extend_line_down", "extend_to_line_bounds"]
 
 [keys.select.g]
 
