@@ -24,11 +24,10 @@ enable = true
 [keys.normal]
 
 # Esc extended
-esc = ["collapse_selection", "keep_primary_selection"]
+esc = ["collapse_selection", "normal_mode"]
 
-# Nvim like paragrph movement.
-"{" = "goto_prev_paragraph"
-"}" = "goto_next_paragraph"
+# Repat last motion ( next )
+"C-n" = ["repeat_last_motion"]
 
 # Go down by 5 lines.
 "C-j"= ["goto_line_start", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down"]
