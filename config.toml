@@ -51,6 +51,20 @@ esc = ["collapse_selection", "normal_mode"]
 # Move line up
 "up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
+# VIM cursor align one key.
+"H" = "goto_window_top"
+"L" = "goto_window_bottom"
+"M" = "goto_window_center"
+
+# Vertical Multicursor.
+"C-v" = "copy_selection_on_next_line"
+
+# Add change to the end of line. ( old veetical multicursor )
+"C" = ["select_mode", "goto_line_end", "change_selection"]
+
+# Delete to the end of line.
+"D" = ["select_mode", "goto_line_end", "delete_selection"]
+
 # muscle memory from vim.
 "{" = ["goto_prev_paragraph", "collapse_selection"]
 "}" = ["goto_next_paragraph", "collapse_selection"]
