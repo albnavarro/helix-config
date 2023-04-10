@@ -92,6 +92,9 @@ G = "goto_file_end"
 k = ["extend_line_up", "extend_to_line_bounds"]
 j = ["extend_line_down", "extend_to_line_bounds"]
 
+# Escape the madness! No more fighting with the cursor! Or with multiple cursors!
+esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
+
 [keys.select.g]
 
 # muscle memory from vim.
