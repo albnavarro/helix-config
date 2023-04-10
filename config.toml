@@ -47,8 +47,43 @@ esc = ["collapse_selection", "normal_mode"]
 # Move line up
 "up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
+# muscle memory
+"{" = ["goto_prev_paragraph", "collapse_selection"]
+"}" = ["goto_next_paragraph", "collapse_selection"]
+0 = "goto_line_start"
+"$" = "goto_line_end"
+"^" = "goto_first_nonwhitespace"
+G = "goto_file_end"
+V = ["select_mode", "extend_to_line_bounds"]
+"%" = "match_brackets"
+"s" = ["delete_selection", "change_selection"]
+"i" = ["insert_mode", "collapse_selection"]
+"a" = ["append_mode", "collapse_selection"]
+
+
 [keys.select]
+
+# Scroll down view by 5 lines
+"C-e" = ["scroll_down", "scroll_down", "scroll_down", "scroll_down", "scroll_down"]
+
+# Scroll up view by 5 lines
+"C-y" = ["scroll_up", "scroll_up", "scroll_up", "scroll_up", "scroll_up"]
 
 # Paste without delete the content.
 p = "replace_with_yanked"
 P = "replace_selections_with_clipboard"
+
+# muscle memory
+"{" = ["extend_to_line_bounds", "goto_prev_paragraph"]
+"}" = ["extend_to_line_bounds", "goto_next_paragraph"]
+0 = "goto_line_start"
+"$" = "goto_line_end"
+"^" = "goto_first_nonwhitespace"
+G = "goto_file_end"
+"%" = "match_brackets"
+
+
+[keys.select.g]
+
+# muscle memory
+"_" = "goto_line_end"
