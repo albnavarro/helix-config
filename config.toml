@@ -18,10 +18,20 @@ mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
 
+[editor.soft-wrap]
+enable = true
+
 [keys.normal]
+
+# Esc extended
 esc = ["collapse_selection", "keep_primary_selection"]
+
+# Nvim like paragrph movement.
 "{" = "goto_prev_paragraph"
 "}" = "goto_next_paragraph"
 
-[editor.soft-wrap]
-enable = true
+# Go down by 5 lines.
+"C-j"= ["goto_line_start", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down"]
+
+# Go up by 5 lines.
+"C-k"= ["goto_line_start", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up"]
