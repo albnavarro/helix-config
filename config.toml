@@ -46,3 +46,9 @@ esc = ["collapse_selection", "normal_mode"]
 
 # Move line up
 "up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
+[keys.select]
+
+# Paste without delete the content.
+p = "replace_with_yanked"
+P = "replace_selections_with_clipboard"
