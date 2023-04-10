@@ -99,3 +99,5 @@ esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
 
 # muscle memory from vim.
 "_" = "goto_line_end"
+0 = "goto_line_start"
+"^" = "goto_first_nonwhitespace"
