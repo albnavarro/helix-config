@@ -22,11 +22,6 @@ mode.select = "SELECT"
 enable = true
 
 
-[editor.cursor-shape]
-insert = "bar"
-normal = "block"
-
-
 ############################################
 ### NORMAL MODE
 ###########################################
