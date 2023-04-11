@@ -83,6 +83,10 @@ V = ["select_mode", "extend_to_line_bounds"]
 # native line select is replaced by V
 "x" = ["delete_selection"]
 
+[keys.normal.g]
+0 = "goto_line_start"
+"_" = "goto_line_end"
+"^" = "goto_first_nonwhitespace"
 
 ############################################
 ### SELECT MODE
@@ -104,10 +108,6 @@ V = ["select_mode", "extend_to_line_bounds"]
 
 # Repat last motion ( next )
 "C-n" = ["repeat_last_motion"]
-
-# Paste without delete the content.
-p = "replace_with_yanked"
-P = "replace_selections_with_clipboard"
 
 # muscle memory from vim.
 "{" = ["extend_to_line_bounds", "goto_prev_paragraph"]
