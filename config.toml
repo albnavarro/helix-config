@@ -21,14 +21,17 @@ mode.select = "SELECT"
 [editor.soft-wrap]
 enable = true
 
+
+
+
 ############################################
 ### NORMAL MODE
 ###########################################
 
 [keys.normal]
 
-# Esc extended
-esc = ["collapse_selection", "normal_mode"]
+# Escape
+"esc" = ["collapse_selection", "normal_mode"]
 
 # Repat last motion ( next )
 "C-n" = ["repeat_last_motion"]
@@ -51,15 +54,9 @@ esc = ["collapse_selection", "normal_mode"]
 # Move line up
 "up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
-# VIM cursor align one key.
-"H" = "goto_window_top"
-"L" = "goto_window_bottom"
-"M" = "goto_window_center"
-
 # Vertical Multicursor.
 "C-v" = "copy_selection_on_next_line"
 
-# muscle memory from vim.
 
 # Add change from cursor to the end of line. ( old veretical multicursor command )
 "C" = ["collapse_selection", "select_mode", "goto_line_end", "change_selection"]
@@ -67,32 +64,46 @@ esc = ["collapse_selection", "normal_mode"]
 # Delete from cursor to the end of line.
 "D" = ["collapse_selection", "select_mode", "goto_line_end", "delete_selection"]
 
-# General
-"{" = ["goto_prev_paragraph", "collapse_selection"]
-"}" = ["goto_next_paragraph", "collapse_selection"]
-0 = "goto_line_start"
-"$" = "goto_line_end"
+# Muscle memory from vim fallback.
+# Will be remove as soon
+"H" = "goto_window_top"
+"L" = "goto_window_bottom"
+"M" = "goto_window_center"
+"0" = "goto_line_start"
 "^" = "goto_first_nonwhitespace"
-G = "goto_file_end"
-V = ["select_mode", "extend_to_line_bounds"]
-"%" = "match_brackets" # use ggVG
-"s" = ["collapse_selection", "change_selection"] # use c to change selection content
-"i" = ["insert_mode", "collapse_selection"]
-"a" = ["append_mode", "collapse_selection"]
+"_" = "goto_line_end"
+"$" = "goto_line_end"
+"G" = "goto_file_end"
+"V" = ["select_mode", "extend_to_line_bounds"]
 
-# native line select is replaced by V
-"x" = ["delete_selection"]
+
+
+
+
+############################################
+### NORMAL MODE G
+###########################################
 
 [keys.normal.g]
-0 = "goto_line_start"
-"_" = "goto_line_end"
+
+# Muscle memory from vim fallback.
+# Will be remove as soon
+"0" = "goto_line_start"
 "^" = "goto_first_nonwhitespace"
+"_" = "goto_line_end"
+"$" = "goto_line_end"
+
+
+
 
 ############################################
 ### SELECT MODE
 ###########################################
 
 [keys.select]
+
+# Escape
+"esc" = ["collapse_selection", "keep_primary_selection", "normal_mode"]
 
 # Move line down
 "down" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
@@ -109,21 +120,21 @@ V = ["select_mode", "extend_to_line_bounds"]
 # Repat last motion ( next )
 "C-n" = ["repeat_last_motion"]
 
-# muscle memory from vim.
-"{" = ["extend_to_line_bounds", "goto_prev_paragraph"]
-"}" = ["extend_to_line_bounds", "goto_next_paragraph"]
-0 = "goto_line_start"
-"$" = "goto_line_end"
-"^" = "goto_first_nonwhitespace"
-G = "goto_file_end"
-"%" = "match_brackets"
-
 # Make selecting lines in visual mode behave sensibly
-k = ["extend_line_up", "extend_to_line_bounds"]
-j = ["extend_line_down", "extend_to_line_bounds"]
+"k" = ["extend_line_up", "extend_to_line_bounds"]
+"j" = ["extend_line_down", "extend_to_line_bounds"]
 
-# Escape the madness! No more fighting with the cursor! Or with multiple cursors!
-esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
+# Muscle memory from vim fallback.
+# Will be remove as soon
+"0" = "goto_line_start"
+"^" = "goto_first_nonwhitespace"
+"_" = "goto_line_end"
+"$" = "goto_line_end"
+"G" = "goto_file_end"
+
+
+
+
 
 ############################################
 ### SELECT G MODE
@@ -131,7 +142,9 @@ esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
 
 [keys.select.g]
 
-# muscle memory from vim.
-"_" = "goto_line_end"
-0 = "goto_line_start"
+# Muscle memory from vim fallback.
+# Will be remove as soon
+"0" = "goto_line_start"
 "^" = "goto_first_nonwhitespace"
+"_" = "goto_line_end"
+"$" = "goto_line_end"
