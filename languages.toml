@@ -1,18 +1,3 @@
-# npm i -g vscode-langservers-extracted
-# npm install -g typescript-language-server typescript
-# npm install -g prettier
-# npm install -g eslint
-# npm install -g stylelint
-
-
-# in .config/helix/
-# npm i
-# hx --grammar fetch
-# hx --grammar build
-# run tree-sitter generate ( inside runtime/grammars/sources/pug folder )
-# create runtime/queries/pug/highlights.scm
-# ( copy from runtime/grammars/sources/pug/queries/highlights.scm )
-# https://docs.helix-editor.com/guides/adding_languages.html
 use-grammars = { only = ["pug"] }
 
 [[language]]
@@ -59,4 +44,4 @@ indent = { tab-width = 4, unit = "  " }
 
 [[grammar]]
 name = "pug"
-source = { git = "https://github.com/zealot128/tree-sitter-pug", rev = "master"}
+source = { git = "https://github.com/zealot128/tree-sitter-pug", rev = "884e225b5ecca5d885ae627275f16ef648acd42e"}

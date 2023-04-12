@@ -52,9 +52,14 @@ enable = true
 # Move line up
 "up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
-# Vertical Multicursor.
-"C-v" = "copy_selection_on_next_line"
+# treeseter selection
+"+" = "expand_selection"
+"_" = "shrink_selection"
+"}" = "select_next_sibling"
+"{" = "select_prev_sibling"
 
+# Switch vertical multicursor from Shift to Ctrl. 
+"C-v" = "copy_selection_on_next_line"
 
 # Add change from cursor to the end of line. ( old veretical multicursor command )
 "C" = ["collapse_selection", "select_mode", "goto_line_end", "change_selection"]
@@ -64,12 +69,8 @@ enable = true
 
 # Muscle memory from vim fallback.
 # Will be remove as soon
-"H" = "goto_window_top"
-"L" = "goto_window_bottom"
-"M" = "goto_window_center"
 "0" = "goto_line_start"
 "^" = "goto_first_nonwhitespace"
-"_" = "goto_line_end"
 "$" = "goto_line_end"
 "G" = "goto_file_end"
 "V" = ["select_mode", "extend_to_line_bounds"]
@@ -88,7 +89,6 @@ enable = true
 # Will be remove as soon
 "0" = "goto_line_start"
 "^" = "goto_first_nonwhitespace"
-"_" = "goto_line_end"
 "$" = "goto_line_end"
 
 
@@ -122,16 +122,18 @@ enable = true
 "k" = ["extend_line_up", "extend_to_line_bounds"]
 "j" = ["extend_line_down", "extend_to_line_bounds"]
 
+# treeseter selection
+"+" = "expand_selection"
+"_" = "shrink_selection"
+"}" = "select_next_sibling"
+"{" = "select_prev_sibling"
+
 # Muscle memory from vim fallback.
 # Will be remove as soon
 "0" = "goto_line_start"
 "^" = "goto_first_nonwhitespace"
-"_" = "goto_line_end"
 "$" = "goto_line_end"
 "G" = "goto_file_end"
-
-
-
 
 
 ############################################
@@ -144,5 +146,4 @@ enable = true
 # Will be remove as soon
 "0" = "goto_line_start"
 "^" = "goto_first_nonwhitespace"
-"_" = "goto_line_end"
 "$" = "goto_line_end"
