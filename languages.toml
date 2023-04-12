@@ -4,6 +4,17 @@
 # npm install -g eslint
 # npm install -g stylelint
 
+
+# in .config/helix/
+# npm i
+# hx --grammar fetch
+# hx --grammar build
+# run tree-sitter generate ( inside runtime/grammars/sources/pug folder )
+# create runtime/queries/pug/highlights.scm
+# ( copy from runtime/grammars/sources/pug/queries/highlights.scm )
+# https://docs.helix-editor.com/guides/adding_languages.html
+use-grammars = { only = ["pug"] }
+
 [[language]]
 name = "html"
 formatter = { command = 'prettier', args = ["--parser", "html"] }
@@ -35,3 +46,17 @@ name = "typescript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 indent = { tab-width = 4, unit = "  " }
+
+[[language]]
+name = "pug"
+scope = "source.pug"
+file-types = ["pug"]
+injection-regex = "pug"
+roots=["src/parser.c", "src/scanner.cc"]
+comment-token = "//-"
+formatter = { command = 'prettier', args = ["--parser", "pug", "--stdin"] }
+indent = { tab-width = 4, unit = "  " }
+
+[[grammar]]
+name = "pug"
+source = { git = "https://github.com/zealot128/tree-sitter-pug", rev = "master"}
