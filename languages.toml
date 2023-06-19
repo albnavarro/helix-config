@@ -2,6 +2,7 @@ use-grammars = { only = ["pug"] }
 
 [[language]]
 name = "html"
+language-server = { command = "emmet-ls", args = ["--stdio"] }
 formatter = { command = 'prettier', args = ["--parser", "html"] }
 indent = { tab-width = 4, unit = "  " }
 
@@ -12,16 +13,20 @@ indent = { tab-width = 4, unit = "  " }
 
 [[language]]
 name = "css"
+language-server = { command = "vscode-css-language-server", args = ["--stdio"] }
 formatter = { command = 'prettier', args = ["--parser", "css"] }
 indent = { tab-width = 4, unit = "  " }
 
 [[language]]
 name = "scss"
+language-server = { command = "vscode-css-language-server", args = ["--stdio"] }
 formatter = { command = 'prettier', args = ["--parser", "css"] }
 indent = { tab-width = 4, unit = "  " }
 
 [[language]]
 name = "javascript"
+# language-server = { command = "vscode-eslint-language-server", args = ["--stdio"] }
+# config = { "workingDirectory" = "./" }
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 indent = { tab-width = 4, unit = "  " }
