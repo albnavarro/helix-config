@@ -21,8 +21,8 @@ docs: https://docs.helix-editor.com/guides/adding_languages.html
 ```
 npm i -g vscode-langservers-extracted
 npm install -g typescript-language-server typescript
-npm install -g prettier
-npm install -g emmet-ls
+npm i -g @olrtg/emmet-language-server
+npm i -g svelte-language-server
 ```
 
 #### Additional dependencies untile helix support multiple LSP:
