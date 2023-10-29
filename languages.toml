@@ -3,14 +3,14 @@ use-grammars = { only = ["pug"] }
 [[language]]
 name = "typescript"
 language-servers = [  "typescript-language-server", "eslint"]
-formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+formatter = { command = 'prettier', args = [ "--parser", "typescript"] }
 auto-format = true
 indent = { tab-width = 4, unit = "  " }
 
 [[language]]
 name = "tsx"
 language-servers = [ "typescript-language-server", "eslint", "emmet-language-server"]
-formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 indent = { tab-width = 4, unit = "  " }
 
@@ -18,23 +18,50 @@ indent = { tab-width = 4, unit = "  " }
 name = "jsx"
 language-servers = [ "typescript-language-server", "eslint"]
 grammar = "javascript"
-formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 indent = { tab-width = 4, unit = "  " }
 
 [[language]]
 name = "javascript"
 language-servers = [ "typescript-language-server", "eslint"]
-formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
-auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 indent = { tab-width = 4, unit = "  " }
+auto-format = true
 
 [[language]]
 name = "json"
 language-servers = [ "vscode-json-language-server" ]
-formatter = { command = 'npx', args = ["prettier", "--parser", "json"] }
+formatter = { command = 'prettier', args = ["--parser", "json"] }
 auto-format = true
 indent = { tab-width = 4, unit = "  " }
+
+[[language]]
+name = "html"
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+language-servers = [ "vscode-html-language-server","emmet-language-server"]
+indent = { tab-width = 4, unit = "  " }
+
+[[language]]
+name = "css"
+formatter = { command = 'prettier', args = ["--parser", "css"] }
+language-servers = [ "vscode-css-language-server", "stylelint-lsp"]
+indent = { tab-width = 4, unit = "  " }
+auto-format = true
+
+[[language]]
+name = "scss"
+formatter = { command = 'prettier', args = ["--parser", "css"] }
+language-servers = [ "vscode-css-language-server"]
+indent = { tab-width = 4, unit = "  " }
+auto-format = true
+
+[[language]]
+name = "svelte"
+formatter = { command = 'prettier', args = ["--parser", "svelte"] }
+language-servers = [ "svelteserver"]
+indent = { tab-width = 4, unit = "  " }
+auto-format = true
 
 [language-server.vscode-json-language-server.config]
 json = { validate = { enable = true }, format = { enable = true } }
@@ -46,52 +73,9 @@ scss = { validate = { enable = true } }
 less = { validate = { enable = true } }
 provideFormatter = true
 
-[[language]]
-name = "html"
-formatter = { command = 'npx', args = ["prettier", "--parser", "html"] }
-language-servers = [ "vscode-html-language-server","emmet-language-server"]
-indent = { tab-width = 4, unit = "  " }
-
-[[language]]
-name = "css"
-formatter = { command = 'npx', args = ["prettier", "--parser", "css"] }
-language-servers = [ "vscode-css-language-server", "stylelint-lsp"]
-indent = { tab-width = 4, unit = "  " }
-auto-format = true
-
-[[language]]
-name = "scss"
-formatter = { command = 'npx', args = ["prettier", "--parser", "css"] }
-language-servers = [ "vscode-css-language-server"]
-indent = { tab-width = 4, unit = "  " }
-auto-format = true
-
-[[language]]
-name = "svelte"
-formatter = { command = 'npx', args = ["prettier", "--parser", "svelte"] }
-language-servers = [ "svelteserver"]
-indent = { tab-width = 4, unit = "  " }
-auto-format = true
-
 [language-server.svelteserver]
 command = "svelteserver"
 args = ["--stdio"]
-
-[language-server.svelteserver.config.configuration.typescript]
-inlayHints.parameterTypes.enabled = true
-inlayHints.variableTypes.enabled = true
-inlayHints.propertyDeclarationTypes.enabled = true
-inlayHints.functionLikeReturnTypes.enabled = true
-inlayHints.enumMemberValues.enabled = true
-inlayHints.parameterNames.enabled = "all"
-
-[language-server.svelteserver.config.configuration.javascript]
-inlayHints.parameterTypes.enabled = true
-inlayHints.variableTypes.enabled = true
-inlayHints.propertyDeclarationTypes.enabled = true
-inlayHints.functionLikeReturnTypes.enabled = true
-inlayHints.enumMemberValues.enabled = true
-inlayHints.parameterNames.enabled = "all"
 
 [language-server.eslint]
 args = ["--stdio"]
@@ -101,7 +85,6 @@ command = "vscode-eslint-language-server"
 format = true
 nodePath = ""
 onIgnoredFiles = "off"
-packageManager = "yarn"
 quiet = false
 rulesCustomizations = []
 run = "onType"
@@ -113,34 +96,15 @@ experimental = { }
 problems = { shortenToSingleLine = false }
 workingDirectory = { mode = "auto" }
 
+
+# [language-server.typescript-language-server.config]
+
 [language-server.emmet-language-server]
 command="emmet-language-server"
 args = ["--stdio"]
 
-[language-server.typescript-language-server.config]
-documentFormatting = false
-hostInfo = "helix"
-
-[language-server.typescript-language-server.config.typescript.inlayHints]
-includeInlayEnumMemberValueHints = true
-includeInlayFunctionLikeReturnTypeHints = true
-includeInlayFunctionParameterTypeHints = true
-includeInlayParameterNameHints = "all"
-includeInlayParameterNameHintsWhenArgumentMatchesName = true
-includeInlayPropertyDeclarationTypeHints = true
-includeInlayVariableTypeHints = true
-
 [language-server.typescript-language-server.config.completions]
 completeFunctionCalls = true
-
-[language-server.typescript-language-server.config.javascript.inlayHints]
-includeInlayEnumMemberValueHints = true
-includeInlayFunctionLikeReturnTypeHints = true
-includeInlayFunctionParameterTypeHints = true
-includeInlayParameterNameHints = "all"
-includeInlayParameterNameHintsWhenArgumentMatchesName = true
-includeInlayPropertyDeclarationTypeHints = true
-includeInlayVariableTypeHints = true
 
 [[language]]
 name = "pug"
