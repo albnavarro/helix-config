@@ -1,4 +1,4 @@
-theme = "tokyonight_storm"
+theme = "nord"
 
 [editor]
 line-number = "relative"
@@ -58,7 +58,7 @@ enable = true
 "}" = "select_next_sibling"
 "{" = "select_prev_sibling"
 
-# Switch vertical multicursor from Shift to Ctrl. 
+# Switch vertical multicursor from Shift to Ctrl.
 "C-v" = "copy_selection_on_next_line"
 
 # Add change from cursor to the end of line. ( old veretical multicursor command )
